@@ -1,2 +1,23 @@
-# plotly_curve
-Visualization project on plotly dash
+## Визуализация на Plotly Dash
+
+### Особенности Plotly Dash
+Маленькая правка если вы хотите пренести код на **jupiter nb** при запуске основного тела программы, необходимо выключить **reloader** как показано ниже:
+
+
+`app.run_server(debug=True, use_reloader=False)  # Turn off reloader if inside Jupyter`
+### Инструкция по переносу на свой ПК
+1. Перенесите репозиторий себе на локальную машину c помощью git (HTTPS)
+**https://github.com/lnetw/plotly_curve.git**
+2. Создайте файл **config.py** в котором буду лежать ваши учетная запись (username) и пароль (password) для подключения к PgAdmin:
+   
+**sql_db = 'postgresql+psycopg2://host/db?user=user&password=password'**
+
+3. Установите необходимые для работы библиотеки из файла **requirements.txt**
+
+4. Запустите код для создания визуализации
+
+### Список доступных файлов
+
+1. **Cultivation curve on df** - код создания визуализации с использованием в качестве значения, заранее загруженной таблицы с показаниями счетчиков
+2. **Cultivation curve on sql** - код создания визуализации с использованием в качестве значения, непосредственно запросов в sql базу данных
+3. **function** - содержит в себе вспомогательные функции для реализации визуализаци
